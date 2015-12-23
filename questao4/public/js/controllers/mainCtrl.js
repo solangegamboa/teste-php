@@ -1,6 +1,3 @@
-/**
- * Created by solange on 18/12/14.
- */
 angular.module('mainCtrl', ['ui.filters','ui.sortable'])
     .controller('mainController', function($scope, $http, Tarefa) {
         $scope.tarefaData = {};

@@ -1,6 +1,3 @@
-/**
- * Created by solange on 18/12/14.
- */
 angular.module('tarefaService', [])
 
     .factory('Tarefa', function($http) {

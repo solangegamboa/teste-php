@@ -36,7 +36,7 @@
                 <input id="titulo-{{tarefa.id}}" class="input-{{tarefa.id}}" style="display:none;" type="text" value="{{tarefa.titulo}}"><br />
                 <textarea id="descricao-{{tarefa.id}}" class="input-{{tarefa.id}}" style="display:none;">{{tarefa.descricao}}</textarea>
 		<div class="botoes">
-			<button type="button" id="delete-btn" class="close delete-btn-{{tarefa.id}}" aria-hidden="true" ng-click="deleteTarefa(tarefa.id)">×</button>
+			<button type="button" id="delete-btn" class="close delete-btn-{{tarefa.id}}" aria-hidden="true" ng-click="deleteTarefa(tarefa.id)">Deletar</button>
 			<button type="button" id="edit-btn" class="close edit-{{tarefa.id}}" aria-hidden="true" ng-click="editTarefa(tarefa.id)">Editar</button>
 			<button type="button" id="save-btn" class="close save-{{tarefa.id}}" style="display:none;" aria-hidden="true" ng-click="saveTarefa(tarefa.id)">Salvar</button>
 		</div>
