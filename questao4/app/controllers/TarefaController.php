@@ -1,6 +1,7 @@
 <?php
 
-class TarefaController extends \BaseController {
+class TarefaController extends \BaseController
+{
 
 	/**
 	 * Display a listing of the resource.
@@ -9,8 +10,10 @@ class TarefaController extends \BaseController {
 	 */
 	public function index()
 	{
+
 		$lista_init = DB::table('tarefas')->orderby('prioridade','asc')->get();
 		return Response::json($lista_init);
+
 	}
 
 
@@ -21,6 +24,7 @@ class TarefaController extends \BaseController {
 	 */
 	public function store()
 	{
+
 		$lista = Input::get('lista');
 		if($lista != ''){
 			$this->update($lista);
@@ -31,6 +35,7 @@ class TarefaController extends \BaseController {
 			$tarefa->save();
 			return Response::json(array('success' => true));
 		}
+
 	}
 
 
@@ -42,20 +47,10 @@ class TarefaController extends \BaseController {
 	 */
 	public function show($id)
 	{
+
 		$tarefa = Tarefa::find($id);
 		return Response::json($tarefa);
-	}
 
-
-	/**
-	 * Show the form for editing the specified resource.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function edit($id)
-	{
-		//
 	}
 
 	/**
@@ -75,6 +70,7 @@ class TarefaController extends \BaseController {
 		}
 
 		return Response::json(array('success' => true));
+
 	}
 
 	/**
@@ -85,23 +81,24 @@ class TarefaController extends \BaseController {
 	 */
 	public function destroy($id)
 	{
-		Tarefa::destroy($id);
 
+		Tarefa::destroy($id);
 		return Response::json(array('success' => true));
+
 	}
 
 	/**
 	 * Update the specified resource in storage.
 	 * @return Response
 	 */
-	public function save(){
+	public function save()
+	{
 
 		DB::table("tarefas")
 			->where('id', intval(Input::get('id')))
 			->update(array('titulo' => Input::get('titulo'),'descricao' => Input::get('descricao')
 			));
 		return Response::json(array('success' => true));
+
 	}
-
-
 }

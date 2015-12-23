@@ -15,8 +15,8 @@ Route::get('/', function()
 // =============================================
 // API ROUTES ==================================
 // =============================================
-Route::group(array('prefix' => 'api'), function() {
-
+Route::group(array('prefix' => 'api'), function()
+{
 	Route::post( 'tarefas/save', 'TarefaController@save');
 
 	// since we will be using this just for CRUD, we won't need create and edit

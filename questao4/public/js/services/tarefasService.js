@@ -3,11 +3,13 @@ angular.module('tarefaService', [])
     .factory('Tarefa', function($http) {
 
         return {
-            get : function() {
+            get : function()
+            {
                 return $http.get('/api/tarefas');
             },
 
-            save : function(tarefaData) {
+            save : function(tarefaData)
+            {
                 return $http({
                     method: 'POST',
                     url: '/api/tarefas',
@@ -16,7 +18,8 @@ angular.module('tarefaService', [])
                 });
             },
 
-            edit : function(tarefaData) {
+            edit : function(tarefaData)
+            {
                 return $http({
                     method: 'POST',
                     url: '/api/tarefas/save',
@@ -25,14 +28,16 @@ angular.module('tarefaService', [])
                 });
             },
 
-            destroy : function(id) {
+            destroy : function(id)
+            {
                 return $http({
                     method: 'DELETE',
                     url: '/api/tarefas/'+id
                 });
             },
 
-            show : function(id){
+            show : function(id)
+            {
                 return $http.get('/api/tarefas' + id);
             }
         }

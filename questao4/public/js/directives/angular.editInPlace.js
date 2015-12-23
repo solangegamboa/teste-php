@@ -1,9 +1,11 @@
-App.directive( 'editInPlace', function() {
+App.directive( 'editInPlace', function()
+{
     return {
         restrict: 'E',
         scope: { value: '=' },
         template: '<span class="todoName" ng-dblclick="edit()" ng-bind="value"></span><input class="todoField" ng-model="value"></input>',
-        link: function ( $scope, element, attrs ) {
+        link: function ( $scope, element, attrs )
+        {
             // Let's get a reference to the input element, as we'll want to reference it.
             var inputElement = angular.element( element.children()[1] );
 
@@ -14,7 +16,8 @@ App.directive( 'editInPlace', function() {
             $scope.editing = false;
 
             // ng-dblclick handler to activate edit-in-place
-            $scope.edit = function () {
+            $scope.edit = function ()
+            {
                 $scope.editing = true;
 
                 // We control display through a class on the directive itself. See the CSS.
@@ -27,7 +30,8 @@ App.directive( 'editInPlace', function() {
             };
 
             // When we leave the input, we're done editing.
-            inputElement.on("blur",function  () {
+            inputElement.on("blur",function  ()
+            {
                 $scope.editing = false;
                 element.removeClass( 'active' );
             });

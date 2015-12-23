@@ -1,5 +1,6 @@
 <?php
 
-class Tarefa extends Eloquent {
+class Tarefa extends Eloquent
+{
 
 }
