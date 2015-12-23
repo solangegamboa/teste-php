@@ -5,27 +5,14 @@
 * de ambos (3 e 5), imprima “FizzBuzz”.
 */
 
-for($i=1;$i<100;$i++){
-  $div = 0;
-  if($i % 3 == 0){
-    $div = $div + 3;
-  }
-  if($i % 5 == 0){
-    $div = $div + 5;
-  }
-
-  switch ($div) {
-    case 3:
-      echo "Fizz\n";
-      break;
-    case 5:
-      echo "Buzz\n";
-      break;
-    case 8:
-      echo "FizzBuzz\n";
-      break;
-    default:
-      echo $i."\n";
-      break;
+for($i=1;$i<100;$i++) {
+  if($i % 3 == 0 && $i % 5 != 0){
+    echo "Fizz\n";
+  } else if($i % 5 == 0 && $i % 3 != 0) {
+    echo "Buzz\n";
+  } else if($i % 3 == 0 && $i % 5 == 0) {
+    echo "FizzBuzz\n"
+  } else {
+    echo $i."\n";
   }
 }
