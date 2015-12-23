@@ -9,7 +9,8 @@ class TarefaController extends \BaseController {
 	 */
 	public function index()
 	{
-		return Response::json(Tarefa::get());
+		$lista_init = DB::table('tarefas')->orderby('prioridade','asc')->get();
+		return Response::json($lista_init);
 	}
 
 

@@ -28,8 +28,8 @@
         </div>  
     </form>
     <p class="text-center" ng-show="loading"><span class="fa fa-meh-o fa-5x fa-spin"></span></p>
-    <ul class="list-unstyled" ui-sortable="sortableOptions" ng-model="tarefas">
-        <li class="todoTask" ng-repeat="tarefa in tarefas | orderBy:predicate:reverse">
+    <ul class="list-unstyled list" ui-sortable="sortableOptions" ng-model="tarefas">
+        <li class="todoTask item" ng-repeat="tarefa in tarefas | orderBy:predicate:reverse">
                 <h3 class="todoName label-{{tarefa.id}}">{{tarefa.titulo}}</h3>
         	    
                 <span class="label-{{tarefa.id}}">{{tarefa.descricao}}</span>
