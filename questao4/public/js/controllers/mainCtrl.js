@@ -8,7 +8,7 @@ angular.module('mainCtrl', ['ui.filters','ui.sortable'])
         Tarefa.get()
             .success(function(data) {
                 $scope.tarefas = data;
-                console.log($scope.tarefas);
+                //console.log($scope.tarefas);
                 $scope.loading = false;
 
 
@@ -17,13 +17,13 @@ angular.module('mainCtrl', ['ui.filters','ui.sortable'])
                         var logEntry = $scope.tarefas.map(function(i){
                             return i.id;
                         }).join(', ');
-                        console.log(logEntry);
+                        //console.log(logEntry);
                     },
                     stop: function (e, ui) {
                         var logEntry = $scope.tarefas.map(function (i) {
                             return i.id;
                         }).join(', ');
-                        console.log(logEntry);
+                        //console.log(logEntry);
                         $http.defaults.headers.post["Content-Type"] = "application/x-www-form-urlencoded";
                         $http.post('/api/tarefas', $.param({ lista: logEntry }))
                             .success(function(data) {
@@ -89,7 +89,7 @@ angular.module('mainCtrl', ['ui.filters','ui.sortable'])
             $(".input-"+id).hide();
             $(".edit-"+id).show();
             $(".save-"+id).hide();
-            console.log(tarefaData);
+            //console.log(tarefaData);
 
             Tarefa.edit(tarefaData)
                 .success(function(data) {
