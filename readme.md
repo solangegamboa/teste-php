@@ -13,7 +13,6 @@ TODOLIST
 #### Instalação
 
 	Instalação no Linux Ubuntu 14.04.1 - Developers
-	3.13.0-43-generic #72-Ubuntu SMP Mon Dec 8 19:35:06 UTC 2014 x86_64 x86_64 x86_64 GNU/Linux
 
 #### Aplicações instaladas:
 	apt-get install mysql-client
