@@ -69,9 +69,6 @@ class TarefaController extends \BaseController {
 
 		$split = explode(",",$lista);
 		for($i = 0; $i < count($split); $i++){
-			echo "ID: ".$split[$i];
-			echo "<br>";
-			echo "Posicao: ". $i;
 			DB::table("tarefas")
 			->where('id', intval($split[$i]))
 			->update(array('prioridade' => $i));
