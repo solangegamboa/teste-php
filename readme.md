@@ -35,6 +35,7 @@ Questão 4 - TODOLIST
 
 #### Dump: 
 	prova-php.sql
+	configuração do banco em questao4/app/config/database.php
 
 #### Iniciar o Laravel:
 	$ cd  questao4 
