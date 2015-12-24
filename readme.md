@@ -38,9 +38,9 @@ Questão 4 - TODOLIST
 	configuração do banco em questao4/app/config/database.php
 
 #### Iniciar o Laravel:
-	$ cd  questao4 
+	$ cd questao4 
 	$ php artisan serve
-
+	- Normalmente ele gera o acesso em http://localhost:8000
 
 #### API REST: 
 	/api/tarefas
