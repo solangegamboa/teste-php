@@ -25,13 +25,13 @@
         </div>
         <div class="form-group text-right">
             <button type="submit" class="btn btn-primary btn-lg">Submit</button>
-        </div>  
+        </div>
     </form>
     <p class="text-center" ng-show="loading"><span class="fa fa-meh-o fa-5x fa-spin"></span></p>
     <ul class="list-unstyled list" ui-sortable="sortableOptions" ng-model="tarefas">
         <li class="todoTask item" ng-repeat="tarefa in tarefas | orderBy:predicate:reverse">
                 <h3 class="todoName label-{{tarefa.id}}">{{tarefa.titulo}}</h3>
-        	    
+
                 <span class="label-{{tarefa.id}}">{{tarefa.descricao}}</span>
                 <input id="titulo-{{tarefa.id}}" class="input-{{tarefa.id}}" style="display:none;" type="text" value="{{tarefa.titulo}}"><br />
                 <textarea id="descricao-{{tarefa.id}}" class="input-{{tarefa.id}}" style="display:none;">{{tarefa.descricao}}</textarea>
@@ -40,7 +40,7 @@
 			<button type="button" id="edit-btn" class="close edit-{{tarefa.id}}" aria-hidden="true" ng-click="editTarefa(tarefa.id)">Editar</button>
 			<button type="button" id="save-btn" class="close save-{{tarefa.id}}" style="display:none;" aria-hidden="true" ng-click="saveTarefa(tarefa.id)">Salvar</button>
 		</div>
-            
+
         </li>
     </ul>
 </div>
@@ -56,4 +56,3 @@
 <script src="js/services/tarefasService.js"></script>
 <script src="js/app.js"></script>
 </html>
-	
